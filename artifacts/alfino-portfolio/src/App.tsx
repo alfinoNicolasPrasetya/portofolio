@@ -2,6 +2,12 @@ import { useEffect, useRef, useState } from 'react';
 import { ArrowRight, ArrowUpRight, Menu, X } from 'lucide-react';
 import { profile, projects, technologies, translations, type Language } from './content';
 
+function normalizeExternalUrl(url: string) {
+  const trimmed = url.trim();
+  if (!trimmed) return '';
+  return /^https?:\/\//i.test(trimmed) ? trimmed : `https://${trimmed.replace(/^\/+/, '')}`;
+}
+
 function Home() {
   const [language, setLanguage] = useState<Language>(() => {
     try {
@@ -53,13 +59,13 @@ function Home() {
 
   const contactLinks = [
     { label: t.contact.emailLabel, value: profile.contact.email, href: profile.contact.email ? `mailto:${profile.contact.email}` : '' },
-    { label: t.contact.githubLabel, value: profile.contact.github, href: profile.contact.github },
-    { label: t.contact.linkedinLabel, value: profile.contact.linkedin, href: profile.contact.linkedin },
+    { label: t.contact.githubLabel, value: profile.contact.github, href: normalizeExternalUrl(profile.contact.github) },
+    { label: t.contact.linkedinLabel, value: profile.contact.linkedin, href: normalizeExternalUrl(profile.contact.linkedin) },
   ];
   const socialLinks = [
-    { label: 'GitHub', href: profile.contact.github },
-    { label: 'LinkedIn', href: profile.contact.linkedin },
-    { label: 'Instagram', href: profile.contact.instagram },
+    { label: 'GitHub', href: normalizeExternalUrl(profile.contact.github) },
+    { label: 'LinkedIn', href: normalizeExternalUrl(profile.contact.linkedin) },
+    { label: 'Instagram', href: normalizeExternalUrl(profile.contact.instagram) },
   ].filter((social) => Boolean(social.href));
 
   const closeMobileMenu = () => setMobileOpen(false);
@@ -161,7 +167,7 @@ function Home() {
               {projects.map((project, index) => (
                 <article className="project-card" key={project.id} data-testid={`card-project-${project.id}`}>
                   {project.image ? (
-                    <img className="project-art" src={project.image} alt={index === 0 ? t.projects.imageAltOne : t.projects.imageAltTwo} width="1912" height="932" loading="lazy" />
+                    <img className="project-art" src={project.image} alt={index === 0 ? t.projects.imageAltOne : t.projects.imageAltTwo} width="720" height="440" loading="lazy" />
                   ) : (
                     <div className="project-art" role="img" aria-label={index === 0 ? t.projects.imageAltOne : t.projects.imageAltTwo} data-testid={`image-project-placeholder-${project.id}`}>
                       <span className="art-grid" aria-hidden="true" />
@@ -216,7 +222,7 @@ function Home() {
                   <span>{item.label}</span>
                   {item.value && item.href ? (
                     <a className="contact-value" href={item.href} target={item.href.startsWith('http') ? '_blank' : undefined} rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined} data-testid={`link-contact-${item.label.toLowerCase()}`}>
-                      {item.label === t.contact.emailLabel ? item.value : item.value.replace(/^https?:\/\/(www\.)?/, '')}<ArrowUpRight size={12} aria-hidden="true" />
+                      {item.label === t.contact.emailLabel ? item.value : item.href.replace(/^https?:\/\/(www\.)?/, '')}<ArrowUpRight size={12} aria-hidden="true" />
                     </a>
                   ) : <span className="contact-value" data-testid={`status-contact-${item.label.toLowerCase()}`}>{t.contact.unavailable}</span>}
                 </div>
@@ -255,17 +261,6 @@ function Home() {
             <div className="dialog-kicker">{t.projects.marker} / {activeProject.number} · {activeProject.context[language]}</div>
             <h2 id="dialog-title">{activeProject.title}</h2>
             <p id="dialog-description">{activeProject.details[language]}</p>
-            {activeProject.screenshots.length > 0 && (
-              <section className="project-gallery" aria-label={t.projects.screenshots} data-testid="project-gallery">
-                <h3 className="dialog-subhead">{t.projects.screenshots}</h3>
-                {activeProject.screenshots.map((screenshot, index) => (
-                  <figure className="project-screenshot" key={screenshot.src} data-testid={`project-screenshot-${index + 1}`}>
-                    <img src={screenshot.src} alt={screenshot.alt[language]} width="1912" height="932" loading="lazy" />
-                    <figcaption>{screenshot.caption[language]}</figcaption>
-                  </figure>
-                ))}
-              </section>
-            )}
             <h3 className="dialog-subhead">{t.projects.features}</h3>
             <ul className="detail-list">
               {activeProject.features[language].map((feature) => <li key={feature}>{feature}</li>)}
@@ -274,7 +269,7 @@ function Home() {
             <div className="tech-row">
               {activeProject.technologies.map((technology) => <span className="tech-pill" key={technology}>{technology}</span>)}
             </div>
-            {activeProject.screenshots.length === 0 && <div className="dialog-foot">{t.projects.imageNote}</div>}
+            <div className="dialog-foot">{t.projects.imageNote}</div>
           </section>
         </div>
       )}

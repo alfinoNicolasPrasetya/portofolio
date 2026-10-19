@@ -3,12 +3,12 @@ export type Language = 'id' | 'en';
 export const profile = {
   name: 'Alfino Nicolas Prasetya',
   degree: 'S.Kom.',
-  profileImage: 'image/profile.jpg',
+  profileImage: '/image/profile.jpg',
   contact: {
     email: 'nicolasprasetya18@gmail.com',
-    github: '',
-    linkedin: '',
-    instagram: '',
+    github: 'https://github.com/alfinoNicolasPrasetya',
+    linkedin: 'https://www.linkedin.com/in/alfinonicolasprasetya',
+    instagram: 'https://www.instagram.com/alfino_nicolas/',
   },
 };
 
