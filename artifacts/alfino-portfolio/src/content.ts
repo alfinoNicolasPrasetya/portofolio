@@ -3,7 +3,7 @@ export type Language = 'id' | 'en';
 export const profile = {
   name: 'Alfino Nicolas Prasetya',
   degree: 'S.Kom.',
-  profileImage: '/image/profile.jpg',
+  profileImage: 'image/profile.jpg',
   contact: {
     email: 'nicolasprasetya18@gmail.com',
     github: '',
@@ -46,9 +46,10 @@ export const translations = {
       artDecision: 'Sistem keputusan / Sugeno',
       artSql: 'Validasi data / SQL',
       viewDetails: 'Baca detail',
-      imageAltOne: 'Artwork placeholder monokrom untuk proyek sistem pendukung keputusan Paskibra.',
+      imageAltOne: 'Tangkapan layar halaman utama website seleksi Paskibra Sekolah Kabupaten Tangerang.',
       imageAltTwo: 'Artwork placeholder monokrom dengan potongan query SQL untuk latihan QA.',
       imageNote: 'Placeholder artwork · ganti dengan screenshot lokal',
+      screenshots: 'Tangkapan layar proyek',
       features: 'Fitur utama',
       learning: 'Konteks',
       technologies: 'Teknologi',
@@ -102,9 +103,10 @@ export const translations = {
       artDecision: 'Decision system / Sugeno',
       artSql: 'Data validation / SQL',
       viewDetails: 'Explore project',
-      imageAltOne: 'Monochrome placeholder artwork for the Paskibra decision support system project.',
+      imageAltOne: 'Screenshot of the Paskibra School selection website landing page for Tangerang Regency.',
       imageAltTwo: 'Monochrome placeholder artwork with a SQL query excerpt for QA practice.',
       imageNote: 'Artwork placeholder · replace with a local screenshot',
+      screenshots: 'Project screenshots',
       features: 'Key features',
       learning: 'Context',
       technologies: 'Technologies',
@@ -148,7 +150,31 @@ export const projects = [
     },
     context: { id: 'Proyek akademik', en: 'Academic project' },
     technologies: ['PHP', 'MySQL', 'Bootstrap'],
-    image: '',
+    image: '/images/paskibra-landing.png',
+    screenshots: [
+      {
+        src: '/images/paskibra-landing.png',
+        alt: {
+          id: 'Halaman utama website seleksi Paskibra Sekolah Kabupaten Tangerang.',
+          en: 'Landing page for the Paskibra School selection website in Tangerang Regency.',
+        },
+        caption: {
+          id: 'Halaman utama seleksi Paskibra',
+          en: 'Paskibra selection landing page',
+        },
+      },
+      {
+        src: '/images/paskibra-dashboard.png',
+        alt: {
+          id: 'Dashboard admin SPK Fuzzy Sugeno dengan ringkasan siswa, aturan fuzzy, dan hasil perhitungan.',
+          en: 'Fuzzy Sugeno decision support dashboard with student summaries, fuzzy rules, and calculation results.',
+        },
+        caption: {
+          id: 'Dashboard admin SPK Fuzzy Sugeno',
+          en: 'Fuzzy Sugeno decision support dashboard',
+        },
+      },
+    ],
     artwork: 'decision',
   },
   {
@@ -170,6 +196,7 @@ export const projects = [
     context: { id: 'Latihan teknis mandiri', en: 'Independent technical practice' },
     technologies: ['SQL', 'MySQL'],
     image: '',
+    screenshots: [],
     artwork: 'sql',
   },
 ];
