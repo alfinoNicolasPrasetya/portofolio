@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Alfino Nicolas Portfolio"
+description = "A responsive bilingual portfolio for Alfino Nicolas Prasetya, presenting his background and learning projects for junior backend developer and QA engineering opportunities."
+version = "1.0.0"
+id = "artifacts/alfino-portfolio"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24444
+
+[services.development]
+run = "pnpm --filter @workspace/alfino-portfolio run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/alfino-portfolio", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/alfino-portfolio/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24444"
+BASE_PATH = "/"

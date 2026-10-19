@@ -1,0 +1,264 @@
+# Personal Portfolio Website — Alfino Nicolas Prasetya
+
+Buat website portofolio pribadi yang modern, minimalis, profesional, dan responsif untuk Alfino Nicolas Prasetya, lulusan S1 Teknik Informatika dengan gelar S.Kom. Website ini ditujukan untuk memperkenalkan profil, menampilkan proyek, dan mendukung proses melamar pekerjaan di bidang IT, khususnya Junior Backend Developer dan QA Engineer.
+
+Website harus benar-benar berfungsi, bukan sekadar mockup visual.
+
+## 1. Konsep Desain
+
+Gunakan konsep **Black & White Minimalist Portfolio** dengan karakter visual yang elegan, bersih, dan modern.
+
+Ketentuan desain:
+- Palet warna utama hanya hitam, putih, dan beberapa tingkat abu-abu.
+- Gunakan tipografi sans-serif modern seperti Inter atau Geist.
+- Berikan whitespace yang cukup agar konten tidak terasa padat.
+- Gunakan garis tipis, border sederhana, dan kontras yang jelas.
+- Hindari gradien warna-warni, ornamen berlebihan, efek neon, dan animasi yang mengganggu.
+- Gunakan animasi ringan untuk transisi halaman, hover, dan kemunculan elemen jika diperlukan.
+- Pastikan tampilannya profesional dan tidak terlihat seperti template portofolio generik.
+
+## 2. Navbar
+
+Buat navbar minimalis dengan:
+- Nama atau wordmark "ALFINO NICOLAS" di sebelah kiri.
+- Navigasi About, Projects, dan Contact di sebelah kanan.
+- Tombol pengalih bahasa ID / EN.
+- Navigasi mobile menggunakan menu yang sederhana dan mudah digunakan.
+
+Navbar dapat menggunakan latar transparan atau putih dengan border tipis. Pastikan navigasi tetap terbaca dan tidak menutupi konten.
+
+## 3. Hero Section
+
+Jadikan hero section sebagai bagian paling menonjol dari website.
+
+Gunakan layout asimetris yang elegan dengan foto pribadi berukuran besar sebagai elemen visual utama. Foto dapat diletakkan di sisi kanan atau menggunakan komposisi full-height yang dipadukan dengan teks di sisi kiri.
+
+Sediakan area foto yang mudah diganti menggunakan file lokal, misalnya `/public/images/profile.jpg`. Jangan membuat foto palsu atau mengganti foto dengan gambar orang lain.
+
+Konten hero:
+
+Nama:
+**Alfino Nicolas Prasetya**
+
+Headline Bahasa Indonesia:
+"Lulusan Teknik Informatika yang Berfokus pada Backend Development dan Software Quality Assurance."
+
+Headline Bahasa Inggris:
+"Informatics Engineering Graduate Focused on Backend Development and Software Quality Assurance."
+
+Deskripsi singkat:
+Bahasa Indonesia:
+"Saya memiliki ketertarikan pada pengembangan aplikasi, pengelolaan database, dan pengujian perangkat lunak. Saya terus mengembangkan kemampuan teknis melalui proyek dan latihan praktis."
+
+Bahasa Inggris:
+"I'm interested in application development, database management, and software testing. I continue to develop my technical skills through projects and hands-on practice."
+
+Tambahkan dua tombol:
+- "Lihat Proyek" / "View Projects"
+- "Hubungi Saya" / "Contact Me"
+
+Gunakan foto dengan aspect ratio yang sesuai, object-fit yang tepat, dan kualitas gambar yang baik. Berikan ruang visual yang cukup agar foto dan teks sama-sama menonjol.
+
+## 4. About Section
+
+Buat section About yang menjelaskan profil secara singkat dan profesional.
+
+Bahasa Indonesia:
+"Saya merupakan lulusan S1 Teknik Informatika yang tertarik pada pengembangan backend, database, dan software quality assurance. Melalui proyek akademik dan latihan mandiri, saya mempelajari pengembangan aplikasi berbasis web, pengelolaan data, serta validasi fungsi dan kualitas sistem. Saya ingin terus mengembangkan kemampuan teknis melalui pengalaman kerja nyata dan kolaborasi dalam tim IT."
+
+Bahasa Inggris:
+"I am an Informatics Engineering graduate interested in backend development, databases, and software quality assurance. Through academic projects and independent practice, I have explored web application development, data management, and functional and system quality validation. I am looking to strengthen my technical skills through real-world experience and collaboration with IT teams."
+
+Tampilkan teknologi yang relevan dalam bentuk label sederhana:
+- PHP
+- Python
+- SQL
+- MySQL
+- JavaScript
+- HTML & CSS
+- Bootstrap
+
+Jangan menampilkan persentase kemampuan atau klaim pengalaman profesional yang belum terverifikasi.
+
+## 5. Projects Section
+
+Judul Bahasa Indonesia: "Proyek Pilihan"
+Judul Bahasa Inggris: "Selected Projects"
+
+Tampilkan proyek dalam bentuk kartu yang konsisten, dengan desain monokrom dan layout responsif.
+
+Setiap kartu harus memuat:
+- Thumbnail atau screenshot proyek.
+- Nama proyek.
+- Deskripsi singkat.
+- Teknologi yang digunakan.
+- Tombol untuk melihat detail.
+- Tautan GitHub atau demo jika tersedia.
+
+Masukkan proyek berikut:
+
+### Project 01 — Sistem Pendukung Keputusan Seleksi Anggota Paskibra
+
+Deskripsi Bahasa Indonesia:
+"Website sistem pendukung keputusan untuk membantu proses seleksi anggota Paskibra tingkat Kabupaten Tangerang menggunakan metode Fuzzy Sugeno."
+
+Deskripsi Bahasa Inggris:
+"A web-based decision support system designed to assist the selection of Paskibra candidates at the Tangerang Regency level using the Fuzzy Sugeno method."
+
+Teknologi:
+PHP, MySQL, Bootstrap.
+
+Fitur utama:
+- Pengelolaan data peserta.
+- Pengelolaan kriteria penilaian.
+- Perhitungan menggunakan metode Fuzzy Sugeno.
+- Penyajian hasil seleksi.
+
+Gunakan screenshot aplikasi asli jika tersedia. Jika belum ada, tampilkan placeholder visual yang jelas dan mudah diganti.
+
+### Project 02 — SQL QA Practice
+
+Deskripsi Bahasa Indonesia:
+"Kumpulan latihan SQL untuk mengembangkan kemampuan validasi data dan pengujian database, termasuk JOIN, agregasi, deteksi data duplikat, NULL, dan validasi relasi antartabel."
+
+Deskripsi Bahasa Inggris:
+"A collection of SQL practice exercises focused on data validation and database testing, including JOINs, aggregations, duplicate detection, NULL handling, and relational integrity checks."
+
+Teknologi:
+SQL, MySQL.
+
+Jangan mengklaim proyek ini sebagai aplikasi produksi. Sajikan secara jujur sebagai latihan teknis atau proyek pembelajaran.
+
+Pastikan data proyek disimpan dalam struktur yang mudah diedit sehingga proyek baru dapat ditambahkan tanpa mengubah keseluruhan layout.
+
+Jangan membuat tautan GitHub, demo, statistik, atau hasil proyek yang tidak benar-benar tersedia.
+
+## 6. Contact Section
+
+Judul Bahasa Indonesia:
+"Mari Terhubung"
+
+Judul Bahasa Inggris:
+"Let's Connect"
+
+Deskripsi Bahasa Indonesia:
+"Terbuka untuk peluang karier, diskusi teknis, dan kolaborasi di bidang teknologi informasi."
+
+Deskripsi Bahasa Inggris:
+"Open to career opportunities, technical discussions, and collaborations in the field of information technology."
+
+Tampilkan informasi kontak:
+- Email.
+- GitHub.
+- LinkedIn.
+
+Gunakan placeholder konfigurasi yang mudah diganti dengan informasi asli. Jangan mengarang alamat email atau URL akun.
+
+Tambahkan tombol "Kirim Email" / "Send an Email" yang membuka aplikasi email menggunakan tautan mailto.
+
+Jika menggunakan formulir kontak, jangan membuatnya seolah-olah dapat mengirim pesan tanpa backend atau layanan pengiriman yang benar-benar berfungsi. Validasi input dan berikan pesan keberhasilan atau kegagalan sesuai hasil pengiriman yang nyata.
+
+## 7. Footer
+
+Buat footer minimalis dengan latar hitam dan teks putih atau gunakan latar putih dengan garis pemisah tipis.
+
+Isi footer:
+- Nama Alfino Nicolas Prasetya.
+- Ikon dan tautan GitHub, LinkedIn, dan Instagram jika tersedia.
+- Copyright dengan tahun yang diperbarui secara dinamis.
+- Tautan navigasi sederhana jika diperlukan.
+
+Pastikan semua ikon memiliki label aksesibilitas dan setiap tautan mengarah ke akun yang benar. Jangan tampilkan ikon media sosial yang tidak digunakan.
+
+## 8. Fitur Bilingual
+
+Website harus mendukung Bahasa Indonesia dan Bahasa Inggris di seluruh bagian utama:
+- Navbar.
+- Hero.
+- About.
+- Projects.
+- Contact.
+- Footer.
+- Tombol, label, dan pesan antarmuka.
+
+Gunakan tombol ID / EN untuk mengganti bahasa tanpa memuat ulang halaman.
+
+Persyaratan:
+- Gunakan satu sumber data terjemahan yang terstruktur.
+- Jangan menerjemahkan nama pribadi atau nama proyek.
+- Pastikan seluruh teks berubah mengikuti bahasa yang dipilih.
+- Simpan preferensi bahasa di localStorage jika sesuai.
+- Gunakan Bahasa Indonesia sebagai bahasa awal.
+
+## 9. Standar Kualitas Website
+
+Terapkan prinsip UI/UX dan kualitas teknis berikut:
+
+**Usability**
+- Navigasi intuitif.
+- Informasi penting mudah ditemukan.
+- CTA memiliki tujuan yang jelas.
+- Hindari interaksi yang tidak diperlukan.
+
+**Accessibility**
+- Gunakan elemen HTML semantik.
+- Tambahkan alt text deskriptif untuk foto dan screenshot.
+- Pastikan navigasi dapat digunakan dengan keyboard.
+- Gunakan focus state yang terlihat.
+- Pastikan kontras teks memadai.
+- Gunakan label yang jelas untuk tombol dan ikon.
+
+**Responsive Design**
+- Mobile-first.
+- Tampilan optimal di smartphone, tablet, laptop, dan desktop.
+- Foto tidak terpotong secara tidak sengaja.
+- Kartu proyek menyesuaikan lebar layar.
+- Tidak ada horizontal overflow.
+
+**Performance**
+- Optimalkan ukuran dan format gambar.
+- Gunakan lazy loading untuk gambar proyek yang berada di bawah fold.
+- Hindari library dan animasi yang tidak diperlukan.
+- Minimalkan layout shift dan waktu pemuatan halaman.
+
+**SEO**
+- Judul halaman yang relevan.
+- Meta description yang profesional.
+- Heading terstruktur dari H1 hingga heading berikutnya.
+- Open Graph metadata.
+- Favicon sederhana.
+- URL dan konten yang mudah dipahami mesin pencari.
+
+**Security & Maintainability**
+- Jangan mengekspos credential, token, atau informasi sensitif.
+- Validasi semua input jika ada formulir.
+- Gunakan struktur komponen yang reusable.
+- Pisahkan data profil, proyek, terjemahan, dan tampilan.
+- Hindari dependensi yang tidak diperlukan.
+
+## 10. Teknologi
+
+Jika platform mendukung implementasi kode, gunakan:
+- React.
+- Vite.
+- Tailwind CSS.
+- Lucide Icons untuk ikon yang konsisten.
+
+Gunakan komponen reusable untuk Navbar, Hero, About, ProjectCard, Contact, dan Footer.
+
+Jika AI builder menggunakan stack berbeda, sesuaikan dengan teknologi bawaan platform tanpa mengurangi kualitas hasil.
+
+Website tidak memerlukan backend atau database hanya untuk menampilkan portofolio statis.
+
+## 11. Hasil Akhir yang Diharapkan
+
+Hasilkan website portofolio yang:
+- Minimalis, monokrom, dan profesional.
+- Menampilkan foto pribadi besar pada hero section.
+- Memiliki About, Projects, Contact, dan footer sosial media.
+- Mendukung Bahasa Indonesia dan Inggris.
+- Responsif dan aksesibel.
+- Memiliki konten yang jujur dan relevan untuk fresh graduate.
+- Siap dikembangkan lebih lanjut dan dipublikasikan secara online.
+
+Jangan berhenti pada desain visual. Implementasikan seluruh komponen, interaksi, navigasi, dan pengalihan bahasa. Setelah selesai, periksa kembali semua tautan, tampilan mobile, kontras, dan fungsi tombol. Prioritaskan kualitas, kesederhanaan, dan kemudahan pemeliharaan.
