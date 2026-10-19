@@ -3,7 +3,7 @@ export type Language = 'id' | 'en';
 export const profile = {
   name: 'Alfino Nicolas Prasetya',
   degree: 'S.Kom.',
-  profileImage: '/image/profile.jpg',
+  profileImage: 'image/profile.jpg',
   contact: {
     email: 'nicolasprasetya18@gmail.com',
     github: 'https://github.com/alfinoNicolasPrasetya',
@@ -47,8 +47,8 @@ export const translations = {
       artSql: 'Validasi data / SQL',
       viewDetails: 'Baca detail',
       imageAltOne: 'Tangkapan layar halaman utama website seleksi Paskibra Sekolah Kabupaten Tangerang.',
-      imageAltTwo: 'Artwork placeholder monokrom dengan potongan query SQL untuk latihan QA.',
-      imageNote: 'Placeholder artwork · ganti dengan screenshot lokal',
+      imageAltTwo: 'Tangkapan layar latihan validasi SQL untuk transaksi, email pelanggan, dan deteksi transaksi mencurigakan.',
+      imageNote: 'Tangkapan layar proyek · ditampilkan dari file lokal',
       screenshots: 'Tangkapan layar proyek',
       features: 'Fitur utama',
       learning: 'Konteks',
@@ -104,8 +104,8 @@ export const translations = {
       artSql: 'Data validation / SQL',
       viewDetails: 'Explore project',
       imageAltOne: 'Screenshot of the Paskibra School selection website landing page for Tangerang Regency.',
-      imageAltTwo: 'Monochrome placeholder artwork with a SQL query excerpt for QA practice.',
-      imageNote: 'Artwork placeholder · replace with a local screenshot',
+      imageAltTwo: 'Screenshot of SQL validation exercises for transactions, customer emails, and suspicious transactions.',
+      imageNote: 'Project screenshot · served from a local file',
       screenshots: 'Project screenshots',
       features: 'Key features',
       learning: 'Context',
@@ -195,8 +195,20 @@ export const projects = [
     },
     context: { id: 'Latihan teknis mandiri', en: 'Independent technical practice' },
     technologies: ['SQL', 'MySQL'],
-    image: '',
-    screenshots: [],
+    image: '/images/sql-validation.png',
+    screenshots: [
+      {
+        src: '/images/sql-validation.png',
+        alt: {
+          id: 'Latihan SQL untuk validasi transaksi berstatus paid, email pelanggan yang kosong, dan jumlah transaksi per pelanggan.',
+          en: 'SQL exercises validating paid transactions, missing customer emails, and transaction counts per customer.',
+        },
+        caption: {
+          id: 'Latihan validasi data dan query SQL',
+          en: 'Data validation and SQL query exercises',
+        },
+      },
+    ],
     artwork: 'sql',
   },
 ];

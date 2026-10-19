@@ -167,7 +167,7 @@ function Home() {
               {projects.map((project, index) => (
                 <article className="project-card" key={project.id} data-testid={`card-project-${project.id}`}>
                   {project.image ? (
-                    <img className="project-art" src={project.image} alt={index === 0 ? t.projects.imageAltOne : t.projects.imageAltTwo} width="720" height="440" loading="lazy" />
+                    <img className="project-art" src={project.image} alt={index === 0 ? t.projects.imageAltOne : t.projects.imageAltTwo} width="720" height="440" loading="eager" />
                   ) : (
                     <div className="project-art" role="img" aria-label={index === 0 ? t.projects.imageAltOne : t.projects.imageAltTwo} data-testid={`image-project-placeholder-${project.id}`}>
                       <span className="art-grid" aria-hidden="true" />
@@ -261,6 +261,17 @@ function Home() {
             <div className="dialog-kicker">{t.projects.marker} / {activeProject.number} · {activeProject.context[language]}</div>
             <h2 id="dialog-title">{activeProject.title}</h2>
             <p id="dialog-description">{activeProject.details[language]}</p>
+            {activeProject.screenshots.length > 0 && (
+              <div className="project-gallery">
+                <h3 className="dialog-subhead">{t.projects.screenshots}</h3>
+                {activeProject.screenshots.map((screenshot) => (
+                  <figure className="project-screenshot" key={screenshot.src}>
+                    <img src={screenshot.src} alt={screenshot.alt[language]} loading="lazy" />
+                    <figcaption>{screenshot.caption[language]}</figcaption>
+                  </figure>
+                ))}
+              </div>
+            )}
             <h3 className="dialog-subhead">{t.projects.features}</h3>
             <ul className="detail-list">
               {activeProject.features[language].map((feature) => <li key={feature}>{feature}</li>)}
