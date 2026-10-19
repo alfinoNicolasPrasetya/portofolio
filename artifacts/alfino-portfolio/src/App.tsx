@@ -111,7 +111,7 @@ function Home() {
           </div>
           <div className="portrait" role="img" aria-label={t.hero.imageAlt} data-testid="image-profile-placeholder">
             {profile.profileImage ? (
-              <img src={profile.profileImage} alt={t.hero.imageAlt} width="640" height="780" fetchPriority="high" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+              <img src={profile.profileImage} alt={t.hero.imageAlt} width="640" height="780" fetchPriority="high" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }} />
             ) : (
               <>
                 <span className="portrait-cross" aria-hidden="true" />

@@ -3,9 +3,9 @@ export type Language = 'id' | 'en';
 export const profile = {
   name: 'Alfino Nicolas Prasetya',
   degree: 'S.Kom.',
-  profileImage: 'public/images/profile.jpg',
+  profileImage: '/image/profile.jpg',
   contact: {
-    email: 'nicolas',
+    email: 'nicolasprasetya18@gmail.com',
     github: '',
     linkedin: '',
     instagram: '',
